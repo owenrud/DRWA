@@ -25,19 +25,5 @@ namespace WebAPI1.Controllers
             _context = HttpContext.RequestServices.GetService(typeof(KelasContext)) as KelasContext;
             return _context.GetSiswa(id);
         }
-
-        //POST/API/KELAS
-        [HttpPost]
-        public ActionResult<KelasItem> AddKelas([FromForm]string kelas,[FromForm]string jurusan,[FromForm]int sub)
-        {
-            KelasItem ki = new KelasItem();
-            ki.kelas = kelas;
-            ki.jurusan = jurusan;
-            ki.sub = sub;
-
-            _context = HttpContext.RequestServices.GetService(typeof(KelasContext))as KelasContext;
-            return _context.AddKelas(ki);
-
-        }
     }
 }

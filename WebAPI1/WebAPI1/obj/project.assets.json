@@ -1652,11 +1652,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ideapad\\Documents\\SI 2020\\Semester 4\\DRWA\\VS Comm\\WebAPI1\\WebAPI1\\WebAPI1.csproj",
+      "projectUniqueName": "D:\\xamp\\htdocs\\WebAPI1\\WebAPI1\\WebAPI1.csproj",
       "projectName": "WebAPI1",
-      "projectPath": "C:\\Users\\ideapad\\Documents\\SI 2020\\Semester 4\\DRWA\\VS Comm\\WebAPI1\\WebAPI1\\WebAPI1.csproj",
+      "projectPath": "D:\\xamp\\htdocs\\WebAPI1\\WebAPI1\\WebAPI1.csproj",
       "packagesPath": "C:\\Users\\ideapad\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ideapad\\Documents\\SI 2020\\Semester 4\\DRWA\\VS Comm\\WebAPI1\\WebAPI1\\obj\\",
+      "outputPath": "D:\\xamp\\htdocs\\WebAPI1\\WebAPI1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ideapad\\AppData\\Roaming\\NuGet\\NuGet.Config",

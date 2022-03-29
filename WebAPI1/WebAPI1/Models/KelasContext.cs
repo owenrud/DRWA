@@ -71,18 +71,5 @@ namespace WebAPI1.Models
             }
             return list;
         }
-        public KelasItem AddKelas(KelasItem ki){
-            using (MySqlConnection conn = GetConnection())
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO kelas (kelas,jurusan, sub) VALUES(@kelas,@jurusan,@sub)", conn);
-                cmd.Parameters.AddWithValue("@kelas", ki.kelas);
-                cmd.Parameters.AddWithValue("@jurusan", ki.jurusan);
-                cmd.Parameters.AddWithValue("@sub", ki.sub);
-
-                cmd.ExecuteReader();
-                }
-            return ki;
-            }
-        }
     }
+}

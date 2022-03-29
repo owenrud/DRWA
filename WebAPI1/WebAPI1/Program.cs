@@ -8,6 +8,18 @@ builder.Services.AddDbContext<KelasContext>(options =>
 {
     options.UseMySQL(connectionString);
 });
+builder.Services.AddDbContext<GuruContext>(options =>
+{
+    options.UseMySQL(connectionString);
+});
+builder.Services.AddDbContext<MapelContext>(options =>
+{
+    options.UseMySQL(connectionString);
+});
+builder.Services.AddDbContext<JadwalContext>(options =>
+{
+    options.UseMySQL(connectionString);
+});
 
 // Add services to the container.
 
