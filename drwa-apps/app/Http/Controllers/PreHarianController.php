@@ -20,7 +20,7 @@ class PreHarianController extends Controller
         $posts = DB::table('presensi_harian')->where('id_presensi_harian',$id)->get();
         
      return response()->json([
-        "User"=>"Owen",
+        "User"=>"Owen Rudiyanto So",
         "waktuakses"=>today(),
          'presensi_harian' => $posts
      ], 200);
