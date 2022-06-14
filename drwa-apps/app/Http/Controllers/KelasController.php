@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
  
 class KelasController extends Controller
 {
-    public function index()
+    public function getKelasAll()
   {
      $posts = DB::table('kelas')->get();
         
@@ -15,7 +15,7 @@ class KelasController extends Controller
          'kelas' => $posts
      ], 200);
   }
-  public function getID($id)
+  public function getKelasID($id)
     {
         $posts = DB::table('kelas')->where('id_kelas',$id)->get();
         
@@ -24,6 +24,49 @@ class KelasController extends Controller
      ], 200);
     }
 
+    public function InsertKelas(Request $request)
+    {
+        DB::table('kelas')->insert([
+            'kelas'=>$request->input('kelas'),
+            'jurusan'=>$request->input('jurusan'),
+            'sub'=>$request->input('sub')
+        ]);
+        
+     return response()->json([
+         "Result" => [
+             "ResultCode"=>0,
+             "ResultMessage"=>"Success Data Masuk ke Database"
+         ]
+     ], 200);
+    }
+
+    public function UpdateKelas(Request $request)
+    {
+        DB::table('kelas')->where('id_kelas',$request->input('id_kelas'))->update([
+            'kelas'=>$request->input('kelas'),
+            'jurusan'=>$request->input('jurusan'),
+            'sub'=>$request->input('sub')
+        ]);
+        
+     return response()->json([
+         "Result" => [
+             "ResultCode"=>0,
+             "ResultMessage"=>"Success Data Masuk ke Database"
+         ]
+     ], 200);
+    }
+    
+    public function DeleteKelas(Request $request)
+    {
+        DB::table('kelas')->where('id_kelas',$request->input('id_kelas'))->delete();
+        
+     return response()->json([
+         "Result" => [
+             "ResultCode"=>0,
+             "ResultMessage"=>"Success Data Hapus dari Database"
+         ]
+     ], 200);
+    }
 
 }
 

@@ -12,5 +12,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/kelas', [App\Http\Controllers\KelasController::class, 'index']);
-Route::get('/kelas/{id}', [App\Http\Controllers\KelasController::class, 'getID']);
+
